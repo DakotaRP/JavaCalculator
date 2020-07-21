@@ -1,4 +1,4 @@
-package Calculator;
+package com.dakota.calculator;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,11 +9,13 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage stage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("Calculator.fxml"));
-        primaryStage.setTitle("CIS_319 Calculator");
-        primaryStage.setScene(new Scene(root, 335, 500));
-        primaryStage.show();
+        stage.setTitle("CIS_319 Calculator");
+        stage.setScene(new Scene(root, 335, 600));
+        stage.setMinWidth(325);
+        stage.setMinHeight(400);
+        stage.show();
     }
 
 

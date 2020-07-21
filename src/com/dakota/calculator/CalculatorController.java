@@ -1,4 +1,4 @@
-package Calculator;
+package com.dakota.calculator;
 
 import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import javafx.fxml.FXML;
@@ -94,13 +94,13 @@ public class CalculatorController {
             // format number1 and store in outputLabel
             outputLabel.setText(decimalFormat.format(number1));
 
-        } else if (hasOperator){       // operator entry, format second number
+        } else {       // operator entry, format second number
             // clear screen when new number is pressed after operator is entered
             outputLabel.setText("");
 
             // if number2 has not been created yet, remove all but the last digit of current string, which is the most recent input
             if(number2 == 0){
-                currentString = currentString.substring(currentString.length()-1, currentString.length());
+                currentString = currentString.substring(currentString.length()-1);
             }
             System.out.println("Input log after operator input and number input: " + currentString);
 
@@ -146,7 +146,7 @@ public class CalculatorController {
             // remove the end of the current string
             System.out.println("Before removal CurrentString: " + currentString);
             if(!currentString.equals("")){
-                if(currentString.substring(currentString.length()-1).equals(".")){
+                if(currentString.endsWith(".")){
                     System.out.println("has . at end");
                     currentString = currentString.substring(0, currentString.length()-2);   // strip last two characters of string
                 } else currentString = currentString.substring(0, currentString.length()-1);   // strip last character of string
