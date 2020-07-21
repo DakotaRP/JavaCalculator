@@ -188,14 +188,6 @@ public class CalculatorController {
             currentString = Double.toString(number2); // set currentString being worked on
             outputLabel.setText(decimalFormat.format(number2)); // set outputLabel
         }
-
-//        // display negative sign on screen if current number is a negative value
-//        if(isNegative){
-//            outputLabel.setText("-" + outputLabel.getText());
-//        } else if (!isNegative){
-//            System.out.println("Removing negative sign");
-//            outputLabel.getText().replaceFirst("-", "");    // remove "-"
-//        }
     }
 
     // perform calculation based on the operator specified
