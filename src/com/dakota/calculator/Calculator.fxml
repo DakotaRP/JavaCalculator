@@ -26,6 +26,7 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
       <Label alignment="CENTER" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="CIS319 Calculator" GridPane.columnSpan="3">
          <font>
@@ -55,101 +56,121 @@
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </GridPane.margin>
       </Button>
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="/" GridPane.columnIndex="3" GridPane.rowIndex="2">
+      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="M-" GridPane.columnIndex="3" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </GridPane.margin>
       </Button>
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="C" GridPane.rowIndex="3">
+      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="C" GridPane.rowIndex="4">
          <GridPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </GridPane.margin>
       </Button>
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="CE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="CE" GridPane.columnIndex="1" GridPane.rowIndex="4">
          <GridPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </GridPane.margin>
       </Button>
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="+-" GridPane.columnIndex="2" GridPane.rowIndex="3">
+      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="+/-" GridPane.columnIndex="2" GridPane.rowIndex="4">
          <GridPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </GridPane.margin>
       </Button>
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="*" GridPane.columnIndex="3" GridPane.rowIndex="3">
+      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="*" GridPane.columnIndex="3" GridPane.rowIndex="4">
          <GridPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </GridPane.margin>
       </Button>
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="7" GridPane.rowIndex="4">
+      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="7" GridPane.rowIndex="5">
          <GridPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </GridPane.margin>
       </Button>
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="8" GridPane.columnIndex="1" GridPane.rowIndex="4">
+      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="8" GridPane.columnIndex="1" GridPane.rowIndex="5">
          <GridPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </GridPane.margin>
       </Button>
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="9" GridPane.columnIndex="2" GridPane.rowIndex="4">
+      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="9" GridPane.columnIndex="2" GridPane.rowIndex="5">
          <GridPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </GridPane.margin>
       </Button>
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="-" GridPane.columnIndex="3" GridPane.rowIndex="4">
+      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="-" GridPane.columnIndex="3" GridPane.rowIndex="5">
          <GridPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </GridPane.margin>
       </Button>
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="4" GridPane.rowIndex="5">
+      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="4" GridPane.rowIndex="6">
          <GridPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </GridPane.margin>
       </Button>
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="5" GridPane.columnIndex="1" GridPane.rowIndex="5">
+      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="5" GridPane.columnIndex="1" GridPane.rowIndex="6">
          <GridPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </GridPane.margin>
       </Button>
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="6" GridPane.columnIndex="2" GridPane.rowIndex="5">
+      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="6" GridPane.columnIndex="2" GridPane.rowIndex="6">
          <GridPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </GridPane.margin>
       </Button>
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="+" GridPane.columnIndex="3" GridPane.rowIndex="5">
+      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="+" GridPane.columnIndex="3" GridPane.rowIndex="6">
          <GridPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </GridPane.margin>
       </Button>
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="1" GridPane.rowIndex="6">
+      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="1" GridPane.rowIndex="7">
          <GridPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </GridPane.margin>
       </Button>
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="2" GridPane.columnIndex="1" GridPane.rowIndex="6">
+      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="2" GridPane.columnIndex="1" GridPane.rowIndex="7">
          <GridPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </GridPane.margin>
       </Button>
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="3" GridPane.columnIndex="2" GridPane.rowIndex="6">
+      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="3" GridPane.columnIndex="2" GridPane.rowIndex="7">
          <GridPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </GridPane.margin>
       </Button>
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="0" GridPane.columnSpan="2" GridPane.rowIndex="7">
+      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="0" GridPane.columnSpan="2" GridPane.rowIndex="8">
          <GridPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </GridPane.margin>
       </Button>
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="." GridPane.columnIndex="2" GridPane.rowIndex="7">
+      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="." GridPane.columnIndex="2" GridPane.rowIndex="8">
          <GridPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </GridPane.margin>
       </Button>
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="=" GridPane.columnIndex="3" GridPane.rowIndex="6" GridPane.rowSpan="2">
+      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="=" GridPane.columnIndex="3" GridPane.rowIndex="7" GridPane.rowSpan="2">
          <GridPane.margin>
             <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
          </GridPane.margin>
       </Button>
+   <Button contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="MS" GridPane.rowIndex="3">
+      <GridPane.margin>
+         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+      </GridPane.margin>
+   </Button>
+   <Button contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="X²" GridPane.columnIndex="1" GridPane.rowIndex="3">
+      <GridPane.margin>
+         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+      </GridPane.margin>
+   </Button>
+   <Button contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="√" GridPane.columnIndex="2" GridPane.rowIndex="3">
+      <GridPane.margin>
+         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+      </GridPane.margin>
+   </Button>
+   <Button contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3">
+      <GridPane.margin>
+         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+      </GridPane.margin>
+   </Button>
    <padding>
       <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
    </padding>
