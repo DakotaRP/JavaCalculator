@@ -4,6 +4,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+
+import java.io.*;
 import java.text.DecimalFormat;
 
 public class CalculatorController {
@@ -15,23 +17,89 @@ public class CalculatorController {
     // Initialize global variables
     private final String DEFAULT_OUTPUT = "0";
     // false if no entry is detected, true if so
-    private boolean hasEntry = false;
+    private static boolean hasEntry = false;
     // false if operator has not been entered, true if so
-    private boolean hasOperator = false;
+    private static boolean hasOperator = false;
     // false if enter has not been pressed, true if so
-    private boolean priorCalc = false;
+    private static boolean priorCalc = false;
     // current string of text being formed prior to operator selection or calculation (=)
-    private String inputString = "";
+    private static String inputString = "";
     // saved value in memory
-    private double memory = 0.0;
+    private static double memory = 0.0;
 
     // formatting for proper comma output
     private final DecimalFormat decimalFormat = new DecimalFormat("#,###,###,##0.0######");
 
-    private double num1 = 0.0;
-    private double num2 = 0.0;
-    private double result = 0.0;
-    private String operator = "";
+    private static double num1 = 0.0;
+    private static double num2 = 0.0;
+    private static double result = 0.0;
+    private static String operator = "";
+
+    // uncomment all of this below after figuring out how to write and read from a file
+    // (right now I don't know how to check if one exists before reading)
+//    // write variables to file that will be read when program starts up next time
+//    public static void writeToFile() throws IOException {
+//        FileOutputStream outStream = new FileOutputStream("calculator.dat");
+//        DataOutputStream outputFile = new DataOutputStream(outStream);
+//
+//        System.out.println("Starting to write");
+//        outputFile.writeBoolean(hasEntry);
+//        outputFile.writeBoolean(hasOperator);
+//        outputFile.writeBoolean(priorCalc);
+//        outputFile.writeUTF(inputString);
+//        outputFile.writeDouble(memory);
+//        outputFile.writeDouble(num1);
+//        outputFile.writeDouble(num2);
+//        outputFile.writeDouble(result);
+//        outputFile.writeUTF(operator);
+//        System.out.println("Finished writing to file");
+//        outputFile.close();
+//    } // end writeToFile()
+//
+//    // read variables from file on startup
+//    public static void readFromFile() throws IOException{
+//        FileInputStream inStream = new FileInputStream("calculator.dat");
+//        DataInputStream inputFile = new DataInputStream(inStream);
+//
+//        // authenticate that the file exists somehow???
+//        // then read from it
+
+//        System.out.println("Starting to read from file");
+//        hasEntry = inputFile.readBoolean();
+//        hasOperator = inputFile.readBoolean();
+//        priorCalc = inputFile.readBoolean();
+//        inputString = inputFile.readUTF();
+//        memory = inputFile.readDouble();
+//        num1 = inputFile.readDouble();
+//        num2 = inputFile.readDouble();
+//        result = inputFile.readDouble();
+//        operator = inputFile.readUTF();
+//        System.out.println("Finished reading from file");
+//        inputFile.close();
+//    }
+
+//    // setup outputs on calculator (only does something if the file exists)
+//    public void initializeProgram(){
+//        // if input ever existed
+//        // else do nothing
+//        if(hasEntry){
+//            // remove place holding text from outputLabel
+//            outputLabel.setText("");
+//
+//            // if number1 was still being worked on
+//            if(!hasOperator){
+//                outputLabel.setText(decimalFormat.format(num1));
+//            } else if(num2 == 0){   // operator has been entered and num2 has not been edited, output operator
+//                if(operator.equals("²")){
+//                    outputLabel.setText(decimalFormat.format(num1) + operator);
+//                } else if(operator.equals("√")) {
+//                    outputLabel.setText(operator + decimalFormat.format(num1));
+//                } else outputLabel.setText(decimalFormat.format(num1) + " " + operator);    // output normal operator
+//            } else if(num2 != 0){   // operator has been entered and num2 has been edited
+//                outputLabel.setText(decimalFormat.format(num2));
+//            }
+//        };
+//    } // end initializeProgram()
 
     // Determine what happens when buttons are clicked
     public void onMouseClick(MouseEvent mouseEvent){
@@ -94,7 +162,7 @@ public class CalculatorController {
         }
 
         // if output already has ".", do not append another to the inputString, leave method without further processing
-        if(input.contains(".") && inputString.contains(".")){
+        if(input.equals(".") && inputString.contains(".")){
             return;
         } else
             inputString += input; // append new input to end of inputString
@@ -132,7 +200,7 @@ public class CalculatorController {
         // take new operator, reset num1 to current result value, and output num1 with new operator
         if(priorCalc && hasOperator){
             primeForNextCalc();
-            this.operator = operator;
+            CalculatorController.operator = operator;
             outputLabel.setText(decimalFormat.format(num1) + " " + operator);
             System.out.println("Num1 = " + num1);
             System.out.println("inputString = " + inputString);
@@ -141,7 +209,7 @@ public class CalculatorController {
         // if no prior operator has been pressed, output the current operator
         if(!hasOperator){
             hasOperator = true;
-            this.operator = operator;
+            CalculatorController.operator = operator;
             outputLabel.setText(outputLabel.getText() + " " + operator);
             System.out.println("Operator selected: " + operator);
         }
